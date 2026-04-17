@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 import MagicRings from "@/components/ui/MagicRings";
@@ -53,173 +54,230 @@ export default function LandingPage() {
   }, []);
 
   return (
-    <main className="bg-brand-charcoal text-brand-white">
-      <section className="relative isolate overflow-hidden border-b border-brand-white/10" id="top">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(237,29,36,0.22),transparent_38%),radial-gradient(circle_at_80%_80%,rgba(160,159,159,0.2),transparent_40%)]" />
-        <div className="absolute inset-0 opacity-80" aria-hidden="true">
+    <main className="bg-brand-white text-brand-charcoal">
+      <section className="relative isolate overflow-hidden border-b border-brand-charcoal/10" id="top">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(237,29,36,0.08),transparent_28%),radial-gradient(circle_at_88%_16%,rgba(35,31,32,0.08),transparent_26%),linear-gradient(180deg,rgba(255,255,255,0.96),rgba(255,255,255,1))]" />
+        <div className="absolute inset-x-0 top-0 h-px bg-brand-charcoal/10" />
+        <div className="absolute inset-0 opacity-70 mix-blend-multiply" aria-hidden="true">
           <MagicRings
             color="#ed1d24"
-            colorTwo="#a09f9f"
-            ringCount={6}
-            speed={0.68}
-            attenuation={9}
-            lineThickness={1.8}
-            baseRadius={0.32}
+            colorTwo="#231f20"
+            ringCount={5}
+            speed={0.42}
+            attenuation={8.5}
+            lineThickness={1.7}
+            baseRadius={0.3}
             radiusStep={0.1}
-            scaleRate={0.08}
-            opacity={0.85}
-            blur={0}
-            noiseAmount={0.03}
-            rotation={0}
-            ringGap={1.34}
-            fadeIn={0.7}
-            fadeOut={0.55}
+            scaleRate={0.05}
+            opacity={0.42}
+            blur={0.2}
+            noiseAmount={0.01}
+            rotation={-12}
+            ringGap={1.28}
+            fadeIn={0.8}
+            fadeOut={0.65}
             followMouse={false}
-            mouseInfluence={0.14}
-            hoverScale={1.06}
-            parallax={0.03}
+            mouseInfluence={0}
+            hoverScale={1.02}
+            parallax={0.01}
             clickBurst={false}
             reducedMotion={reducedMotion}
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-charcoal/30 via-brand-charcoal/66 to-brand-charcoal" />
-
-        <header className="relative mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6 md:px-8">
-          <a href="#top" className="font-heading text-xl uppercase tracking-[0.22em] text-brand-white">
-            Atomik Audio
+        <header className="relative mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-5 md:px-10">
+          <a
+            href="#top"
+            className="relative inline-flex h-14 w-36 items-center justify-center rounded-full border border-transparent bg-[#fbf7f5] shadow-none"
+          >
+            <Image
+              src="/Atomik-White-Logo.svg"
+              alt="Atomik Audio"
+              fill
+              unoptimized
+              priority
+              sizes="144px"
+              style={{ objectFit: "contain", filter: "brightness(0) saturate(100%)" }}
+            />
           </a>
-          <nav aria-label="Primary" className="hidden gap-8 md:flex">
-            <a href="#products" className="text-sm text-brand-ash transition-colors hover:text-brand-white">
+          <nav aria-label="Primary" className="hidden items-center gap-10 md:flex">
+            <a href="#products" className="text-xs uppercase tracking-[0.2em] text-brand-charcoal transition-colors hover:text-brand-red">
               Systems
             </a>
-            <a href="#engineering" className="text-sm text-brand-ash transition-colors hover:text-brand-white">
+            <a href="#engineering" className="text-xs uppercase tracking-[0.2em] text-brand-charcoal transition-colors hover:text-brand-red">
               Engineering
             </a>
-            <a href="#contact" className="text-sm text-brand-ash transition-colors hover:text-brand-white">
+            <a href="#contact" className="text-xs uppercase tracking-[0.2em] text-brand-charcoal transition-colors hover:text-brand-red">
               Contact
             </a>
           </nav>
         </header>
 
-        <div className="relative mx-auto grid min-h-[74svh] w-full max-w-6xl items-end px-6 pb-16 pt-16 md:grid-cols-12 md:gap-8 md:px-8 md:pb-20">
-          <div className="md:col-span-8">
-            <p className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-brand-ash">
-              Pro Audio, Reframed
+        <div className="relative mx-auto grid min-h-[calc(100svh-4.5rem)] w-full max-w-7xl gap-10 px-6 pb-8 pt-10 md:grid-cols-12 md:gap-8 md:px-10 md:pb-12 md:pt-14">
+          <div className="md:col-span-7 md:pt-10 lg:pt-16">
+            <p className="mb-5 font-mono text-[11px] uppercase tracking-[0.28em] text-brand-ash">
+              Minimal pro-audio identity system
             </p>
-            <h1 className="max-w-4xl font-heading text-5xl uppercase leading-[0.9] tracking-[0.04em] text-brand-white sm:text-6xl md:text-7xl lg:text-8xl">
-              Precision Sound
-              <span className="block text-brand-red">Built In Time.</span>
+            <h1 className="max-w-4xl font-heading text-6xl uppercase leading-[0.83] tracking-[0.02em] text-brand-charcoal sm:text-7xl md:text-[7.6rem] lg:text-[9.5rem]">
+              Precision.
+              <span className="block text-brand-red">Power.</span>
+              <span className="block">Presence.</span>
             </h1>
-            <p className="mt-8 max-w-2xl text-base leading-7 text-brand-ash md:text-lg">
-              Atomik Audio builds high-performance systems engineered for clarity, control, and musical impact in real-world spaces.
+            <p className="mt-7 max-w-xl text-sm leading-7 text-brand-charcoal/72 md:text-base md:leading-8">
+              Atomik Audio builds clean, high-output systems for spaces that demand clarity, control, and visual restraint.
             </p>
-            <div className="mt-10 flex flex-wrap gap-4" id="contact">
+            <div className="mt-8 flex flex-wrap items-center gap-5" id="contact">
               <a
                 href="mailto:hello@atomikaudio.com"
-                className="inline-flex items-center justify-center rounded-full border border-brand-red bg-brand-red px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-brand-white transition-all duration-300 hover:bg-transparent"
+                className="inline-flex items-center justify-center border-b border-brand-charcoal pb-1 text-sm font-semibold uppercase tracking-[0.18em] text-brand-charcoal transition-colors duration-300 hover:text-brand-red"
               >
-                Request A Demo
+                Get In Touch
               </a>
               <a
                 href="#products"
-                className="inline-flex items-center justify-center rounded-full border border-brand-white/30 px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-brand-white transition-colors duration-300 hover:border-brand-white"
+                className="group inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-brand-charcoal transition-colors duration-300 hover:text-brand-red"
               >
+                <span className="h-px w-10 bg-brand-charcoal/40 transition-colors duration-300 group-hover:bg-brand-red" />
                 Explore Systems
               </a>
             </div>
           </div>
+
+          <div className="relative md:col-span-5 md:pt-6 lg:pt-12">
+            <div className="rounded-[1.15rem] shadow-[0_24px_60px_rgba(35,31,32,0.08)]">
+              <div className="relative aspect-4/5 overflow-hidden rounded-[1.15rem] bg-[#eae4dc]">
+                <video
+                  className="absolute inset-0 h-full w-full object-cover"
+                  src="/Luxury_Speaker_Product_Showcase_Video.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(246,242,236,0.12)_0%,rgba(255,255,255,0.05)_30%,rgba(35,31,32,0.08)_100%)]" />
+                <div className="absolute inset-0 opacity-38 mix-blend-normal">
+                  <MagicRings
+                    color="#ed1d24"
+                    colorTwo="#231f20"
+                    ringCount={4}
+                    speed={0.33}
+                    attenuation={8.8}
+                    lineThickness={1.65}
+                    baseRadius={0.28}
+                    radiusStep={0.1}
+                    scaleRate={0.045}
+                    opacity={0.34}
+                    blur={0}
+                    noiseAmount={0.008}
+                    rotation={18}
+                    ringGap={1.22}
+                    fadeIn={0.8}
+                    fadeOut={0.62}
+                    followMouse={false}
+                    mouseInfluence={0}
+                    hoverScale={1.02}
+                    parallax={0.01}
+                    clickBurst={false}
+                    reducedMotion={reducedMotion}
+                  />
+                </div>
+                <div className="absolute inset-x-5 bottom-5 rounded-[1rem] border border-brand-charcoal/10 bg-[#f6f2ec]/70 p-4 backdrop-blur-[2px]">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-brand-ash">Quasar Series / Visual signature</p>
+                  <p className="mt-2 max-w-xs text-sm leading-6 text-brand-charcoal/70">
+                    A restrained system for premium installers, engineers, and venue owners.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
 
-      <section className="mx-auto w-full max-w-6xl px-6 py-20 md:px-8" aria-labelledby="pillars-title">
-        <p className="font-mono text-xs uppercase tracking-[0.18em] text-brand-red">Brand Core</p>
-        <h2 id="pillars-title" className="mt-3 font-heading text-4xl uppercase tracking-[0.06em] text-brand-white md:text-5xl">
-          Digital Accuracy.
-          <span className="block text-brand-ash">Analog Soul.</span>
-        </h2>
-
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
+        <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 gap-px border-t border-brand-charcoal/10 bg-brand-charcoal/10 md:grid-cols-3">
           {featurePillars.map((pillar) => (
-            <article key={pillar.title} className="rounded-2xl border border-brand-white/12 bg-brand-white/3 p-6 backdrop-blur-sm">
-              <h3 className="font-heading text-2xl uppercase tracking-[0.05em] text-brand-white">{pillar.title}</h3>
-              <p className="mt-4 text-sm leading-7 text-brand-ash">{pillar.description}</p>
+            <article key={pillar.title} className="bg-brand-white px-6 py-6 md:px-8 md:py-8">
+              <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-brand-red">{pillar.title}</p>
+              <p className="mt-3 max-w-sm text-sm leading-7 text-brand-charcoal/72">{pillar.description}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="border-y border-brand-white/10 bg-[#1a1919]" id="products" aria-labelledby="products-title">
-        <div className="mx-auto w-full max-w-6xl px-6 py-20 md:px-8">
-          <p className="font-mono text-xs uppercase tracking-[0.18em] text-brand-red">Featured Systems</p>
-          <h2 id="products-title" className="mt-3 font-heading text-4xl uppercase tracking-[0.06em] text-brand-white md:text-5xl">
-            Quasar Series Snapshot
-          </h2>
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {productPreview.map((product) => (
-              <article key={product.name} className="rounded-2xl border border-brand-white/12 bg-brand-charcoal p-6">
-                <p className="font-mono text-xs uppercase tracking-[0.18em] text-brand-red">{product.type}</p>
-                <h3 className="mt-5 font-heading text-3xl uppercase tracking-[0.05em] text-brand-white">{product.name}</h3>
-                <p className="mt-5 text-sm leading-7 text-brand-ash">{product.specs}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="engineering" className="mx-auto w-full max-w-6xl px-6 py-20 md:px-8" aria-labelledby="engineering-title">
-        <div className="grid gap-8 md:grid-cols-12 md:items-center">
-          <div className="md:col-span-6">
-            <p className="font-mono text-xs uppercase tracking-[0.18em] text-brand-red">Engineering Lab</p>
-            <h2 id="engineering-title" className="mt-3 font-heading text-4xl uppercase tracking-[0.06em] text-brand-white md:text-5xl">
-              Anechoic Accuracy
+      <section id="products" className="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-20" aria-labelledby="pillars-title">
+        <div className="flex flex-col gap-6 border-b border-brand-charcoal/10 pb-8 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-brand-ash">Brand Core</p>
+            <h2 id="pillars-title" className="mt-3 max-w-3xl font-heading text-4xl uppercase tracking-[0.04em] text-brand-charcoal md:text-6xl">
+              Designed to disappear.
+              <span className="block text-brand-red">Built to be heard.</span>
             </h2>
-            <p className="mt-6 text-base leading-8 text-brand-ash md:max-w-xl">
-              Every system is shaped through controlled listening, measurement discipline, and iterative voicing inside Atomik&apos;s dedicated acoustic spaces.
-            </p>
-            <a
-              href="mailto:hello@atomikaudio.com?subject=Schedule%20a%20Lab%20Visit"
-              className="mt-8 inline-flex items-center text-sm font-semibold uppercase tracking-[0.16em] text-brand-white transition-colors hover:text-brand-red"
-            >
-              Schedule A Visit
-            </a>
           </div>
-          <div className="relative overflow-hidden rounded-3xl border border-brand-white/12 bg-gradient-to-br from-[#232021] to-[#131313] p-8 md:col-span-6">
-            <div className="absolute -right-10 -top-10 h-36 w-36 rounded-full bg-brand-red/20 blur-2xl" />
-            <div className="absolute -bottom-12 -left-8 h-36 w-36 rounded-full bg-brand-ash/30 blur-2xl" />
-            <p className="relative font-mono text-xs uppercase tracking-[0.2em] text-brand-ash">Signal Integrity Readout</p>
-            <dl className="relative mt-8 grid grid-cols-2 gap-6">
-              <div>
-                <dt className="font-mono text-xs uppercase tracking-[0.18em] text-brand-ash">Latency</dt>
-                <dd className="mt-2 font-heading text-4xl uppercase text-brand-white">1.8 ms</dd>
-              </div>
-              <div>
-                <dt className="font-mono text-xs uppercase tracking-[0.18em] text-brand-ash">Headroom</dt>
-                <dd className="mt-2 font-heading text-4xl uppercase text-brand-white">+21 dB</dd>
-              </div>
-              <div>
-                <dt className="font-mono text-xs uppercase tracking-[0.18em] text-brand-ash">Directivity</dt>
-                <dd className="mt-2 font-heading text-4xl uppercase text-brand-white">90 x 60</dd>
-              </div>
-              <div>
-                <dt className="font-mono text-xs uppercase tracking-[0.18em] text-brand-ash">THD</dt>
-                <dd className="mt-2 font-heading text-4xl uppercase text-brand-white">&lt; 0.15%</dd>
-              </div>
-            </dl>
+          <p className="max-w-lg text-sm leading-7 text-brand-charcoal/70 md:text-right">
+            White space, sharp hierarchy, and a disciplined red accent system keep the focus on products, engineering, and conversion.
+          </p>
+        </div>
+
+        <div className="mt-8 grid gap-6 md:grid-cols-3">
+          {productPreview.map((product) => (
+            <article key={product.name} className="group rounded-[1.75rem] border border-brand-charcoal/12 bg-brand-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(35,31,32,0.06)]">
+              <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-brand-red">{product.type}</p>
+              <h3 className="mt-6 font-heading text-4xl uppercase tracking-[0.03em] text-brand-charcoal">{product.name}</h3>
+              <p className="mt-5 max-w-sm text-sm leading-7 text-brand-charcoal/70">{product.specs}</p>
+              <div className="mt-8 h-px w-full bg-brand-charcoal/10" />
+              <p className="mt-4 text-xs uppercase tracking-[0.22em] text-brand-ash transition-colors group-hover:text-brand-red">View details →</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="border-t border-brand-charcoal/10 bg-[#fbfbfa]" id="engineering" aria-labelledby="engineering-title">
+        <div className="mx-auto grid w-full max-w-7xl gap-8 px-6 py-16 md:grid-cols-12 md:px-10 md:py-20">
+          <div className="md:col-span-5">
+            <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-brand-red">Engineering Lab</p>
+            <h2 id="engineering-title" className="mt-3 font-heading text-4xl uppercase tracking-[0.04em] text-brand-charcoal md:text-6xl">
+              Acoustics first.
+            </h2>
+            <p className="mt-5 max-w-lg text-sm leading-7 text-brand-charcoal/70 md:text-base md:leading-8">
+              Controlled listening rooms, measured voicing, and field-tested deployment are the backbone of the Atomik process.
+            </p>
+          </div>
+          <div className="md:col-span-7">
+            <div className="grid gap-px overflow-hidden rounded-[1.75rem] border border-brand-charcoal/12 bg-brand-charcoal/10 md:grid-cols-2">
+              {[
+                ["Latency", "1.8 ms"],
+                ["Headroom", "+21 dB"],
+                ["Directivity", "90 x 60"],
+                ["THD", "< 0.15%"],
+              ].map(([label, value]) => (
+                <div key={label} className="bg-brand-white p-6 md:p-8">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-brand-ash">{label}</p>
+                  <p className="mt-4 font-heading text-4xl uppercase tracking-[0.03em] text-brand-charcoal md:text-5xl">{value}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-6 flex items-center justify-between border-t border-brand-charcoal/10 pt-4">
+              <a
+                href="mailto:hello@atomikaudio.com?subject=Schedule%20a%20Lab%20Visit"
+                className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-charcoal transition-colors hover:text-brand-red"
+              >
+                Schedule a visit
+              </a>
+              <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-brand-ash">Anechoic chamber / India</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <footer className="border-t border-brand-white/10">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-10 md:flex-row md:items-center md:justify-between md:px-8">
-          <p className="text-sm text-brand-ash">Atomik Audio © 2026. Precision systems for modern listening spaces.</p>
+      <footer className="border-t border-brand-charcoal/10 bg-brand-white">
+        <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-6 py-8 md:flex-row md:items-center md:justify-between md:px-10">
+          <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-brand-ash">Atomik Audio © 2026</p>
           <div className="flex gap-6">
-            <a href="https://www.instagram.com/atomikaudio/" className="text-sm text-brand-ash transition-colors hover:text-brand-white">
+            <a href="https://www.instagram.com/atomikaudio/" className="text-xs uppercase tracking-[0.2em] text-brand-charcoal transition-colors hover:text-brand-red">
               Instagram
             </a>
-            <a href="https://www.youtube.com/@atomikaudio" className="text-sm text-brand-ash transition-colors hover:text-brand-white">
+            <a href="https://www.youtube.com/@atomikaudio" className="text-xs uppercase tracking-[0.2em] text-brand-charcoal transition-colors hover:text-brand-red">
               YouTube
             </a>
-            <a href="mailto:hello@atomikaudio.com" className="text-sm text-brand-ash transition-colors hover:text-brand-white">
+            <a href="mailto:hello@atomikaudio.com" className="text-xs uppercase tracking-[0.2em] text-brand-charcoal transition-colors hover:text-brand-red">
               Email
             </a>
           </div>

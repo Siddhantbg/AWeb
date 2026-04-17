@@ -9,11 +9,11 @@
   --brand-white: #ffffff;
   --brand-ash: #a09f9f;
   --brand-red: #ed1d24;
-  --font-heading: "DIN Condensed", var(--font-barlow-condensed);
+  --font-heading-display: "DIN Condensed", var(--font-barlow-condensed);
   --font-body: var(--font-montserrat);
   --font-digital: var(--font-space-mono);
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --background: var(--brand-white);
+  --foreground: var(--brand-charcoal);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -53,9 +53,9 @@
   --color-brand-white: var(--brand-white);
   --color-brand-ash: var(--brand-ash);
   --color-brand-red: var(--brand-red);
-  --font-sans: var(--font-sans);
+  --font-sans: var(--font-body);
   --font-mono: var(--font-digital);
-  --font-heading: var(--font-sans);
+  --font-heading: var(--font-heading-display);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -96,10 +96,12 @@
 
 body {
   font-family: var(--font-body), sans-serif;
+  background: var(--background);
+  color: var(--foreground);
 }
 
 .font-heading {
-  font-family: var(--font-heading), sans-serif;
+  font-family: var(--font-heading-display), sans-serif;
 }
 
 .font-mono {
